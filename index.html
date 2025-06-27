@@ -1,7 +1,9 @@
 <script>
   const params = new URLSearchParams(location.search);
-  const code   = params.get('code');
+  const code  = params.get('code');
+  const state = params.get('state');   // прокидаємо далі
   if (code) {
-    location.href = `com.marchenko.gridly.meta://ig-auth?code=${code}`;
+    location.href =
+      `com.marchenko.gridly.meta://ig-auth?code=${code}&state=${state}`;
   }
 </script>
