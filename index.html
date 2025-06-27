@@ -1,0 +1,7 @@
+<script>
+  const params = new URLSearchParams(location.search);
+  const code   = params.get('code');
+  if (code) {
+    location.href = `com.marchenko.gridly.meta://ig-auth?code=${code}`;
+  }
+</script>
